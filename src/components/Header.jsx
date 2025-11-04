@@ -6,10 +6,8 @@ export default function Header() {
     <>
       <header>
         {/* {navbar} */}
-        <nav>
-          <div className="cnt-nav">
-            <Link>Movie's road</Link>
-          </div>
+        <nav className="cnt-nav">
+            <Link to="/" id="nav-logo">Movie's road</Link>
         </nav>
       </header>
     </>
