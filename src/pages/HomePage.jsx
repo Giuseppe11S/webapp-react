@@ -21,10 +21,12 @@ export default function Homepage() {
   const renderMovies = () => {
     return movies.map((movie) => (
       <div className="movie-card" key={movie.id}>
+        <Link to={`/movies/${movie.id}`}>
         <MoviesCard         
         title={movie.title}
         image={movie.image}
         abstract={movie.abstract}/>
+        </Link>
       </div>
     ));
   };
