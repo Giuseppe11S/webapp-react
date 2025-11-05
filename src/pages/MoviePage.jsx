@@ -54,10 +54,11 @@ export default function MoviePage() {
       </div>
 
 
-    <div className="card-review">
-      {/* // recensioni */}
-     {renderReviews()}
-     </div>
+      <div className="card-review">
+        {/* // recensioni */}
+      {renderReviews()}
+      </div>
+     <Link to={`/movies`}><button>Back to Home</button></Link>
     </>
   )
   

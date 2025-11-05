@@ -12,6 +12,7 @@ export default function MoviesCard({title, image, abstract}){
         <img src={imageUrl} alt={title} />
         <h2>{title}</h2>
         <p>{abstract}</p>
+        <button className="card-btn-see">See more</button>
       </div>
       </>
 )}

@@ -22,10 +22,10 @@ export default function Homepage() {
     return movies.map((movie) => (
       <div className="movie-card" key={movie.id}>
         <Link to={`/movies/${movie.id}`}>
-        <MoviesCard         
-        title={movie.title}
-        image={movie.image}
-        abstract={movie.abstract}/>
+          <MoviesCard         
+          title={movie.title}
+          image={movie.image}
+          abstract={movie.abstract}/>
         </Link>
       </div>
     ));
@@ -36,7 +36,7 @@ export default function Homepage() {
 
   return (
     <>
-      <div className="container">
+      <div className="container-cards">
         {renderMovies()}
       </div>
     </>

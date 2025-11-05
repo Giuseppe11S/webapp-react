@@ -5,8 +5,13 @@
 }
 
 body{
-  background-color: #0b0c10;
+  background-color: white;
   font-family: 'Poppins', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: black;
 }
 
 .cnt-nav {
@@ -21,4 +26,44 @@ body{
   text-decoration: none;
   cursor: pointer;
   font-size: 1.8rem;
+}
+
+
+.container-cards{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.card-movie{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 400px;
+  min-height: 500px;
+  background-color: white;
+  border: 1px solid chocolate;
+  margin-bottom: 10px;
+  gap: 5px;
+}
+
+.card-movie img {
+  width: 100%;
+  height: 600px;
+}
+
+.card-movie p{
+  font-size: 0.95rem;
+}
+
+.card-btn-see{
+  background-color: chocolate;
+  border: none;
+  padding: 7px 14px;
+  border-radius: 1rem;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
 }
