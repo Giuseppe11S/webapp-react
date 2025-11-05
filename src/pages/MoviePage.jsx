@@ -47,9 +47,9 @@ export default function MoviePage() {
             alt={movie.title}
             className="movie-image"
           />
-          <p><strong>Regista:</strong> {movie.director}</p>
-          <p><strong>Genere:</strong> {movie.genre}</p>
-          <p><strong>Anno:</strong> {movie.release_year}</p>
+          <p>{movie.director}</p>
+          <p>{movie.genre}</p>
+          <p>{movie.release_year}</p>
           <p>{movie.abstract}</p>
       </div>
 
