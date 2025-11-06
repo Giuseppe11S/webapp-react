@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import axios from "axios"
 import { Link, useParams } from "react-router-dom"
-import HomePage from "./HomePage"
+import ReviewForm from "../components/ReviewForm"
 
 // prop per singola review
 import ReviewCard from "../components/ReviewCard"
@@ -41,24 +41,29 @@ export default function MoviePage() {
   return (
     <>
       <div className="movie-header">
-          <h1>{movie.title}</h1>
+        <div className="card-film-review">
           <img
             src={movie.image}
             alt={movie.title}
             className="movie-image"
           />
+          <h1>{movie.title} - {movie.release_year}</h1>
           <p>{movie.director}</p>
           <p>{movie.genre}</p>
-          <p>{movie.release_year}</p>
           <p>{movie.abstract}</p>
-      </div>
-
-
-      <div className="card-review">
-        {/* // recensioni */}
-      {renderReviews()}
-      </div>
-     <Link to={`/movies`}><button>Back to Home</button></Link>
+          <Link to={`/`}><button className="btn-back-home">Back to Home</button></Link>
+          </div>
+          </div>
+            {/* // recensioni */}
+          <div className="cnt-all-reviews">
+            {renderReviews()}
+            {/* form per inserire la recensione */}
+            </div>
+      {/* input form per l'utente per inserire una recensione */}
+      <ReviewForm movies_id={id} reloadReviews={fetchMovie} />
+     <div className="cnt-bottom-btn">
+     <Link to={`/`}><button className="btn-back-home">Back to Home</button></Link>
+     </div>
     </>
   )
   
